@@ -240,7 +240,7 @@ export const projects: Project[] = [
     stack: ['Python', 'OpenMetadata', 'Kubernetes', 'Helm', 'PostgreSQL', 'SHACL', 'JSON-LD', 'Next.js'],
     links: [
       { type: 'live_demo', url: 'https://tfm-plataforma-gobierno-dato.vercel.app' },
-      { type: 'github', url: 'https://github.com/AlonsoMarcosM/TFM_Alonso_Marcos_Mu-oz' },
+      { type: 'github', url: 'https://github.com/alonsomarcosm99/TFM_Alonso_Marcos_Mu-oz' },
     ],
     context: {
       es: 'Trabajo Fin de Máster centrado en interoperabilidad, calidad y operación reproducible de metadatos.',
@@ -281,8 +281,8 @@ export const projects: Project[] = [
     tags: ['OpenMetadata', 'UNE 0077-0081', 'Kubernetes'],
     stack: ['OpenMetadata', 'Kubernetes', 'Helm', 'Python', 'PowerShell'],
     links: [
-      { type: 'technical_docs', url: 'https://alonsomarcosm.github.io/TrabajoGobiernoCalidadDatos/' },
-      { type: 'github', url: 'https://github.com/AlonsoMarcosM/TrabajoGobiernoCalidadDatos' },
+      { type: 'technical_docs', url: 'https://alonsomarcosm99.github.io/TrabajoGobiernoCalidadDatos/' },
+      { type: 'github', url: 'https://github.com/alonsomarcosm99/TrabajoGobiernoCalidadDatos' },
     ],
     context: {
       es: 'Caso ficticio de EnergiTech usado para convertir procesos UNE en catálogo, glosario, linaje y propiedades navegables.',
@@ -321,8 +321,8 @@ export const projects: Project[] = [
     tags: ['Terraform', 'AWS', 'Lambda', 'IaC'],
     stack: ['Terraform', 'AWS EC2', 'Amazon S3', 'AWS Lambda', 'SNS', 'CloudWatch', 'SSM'],
     links: [
-      { type: 'technical_docs', url: 'https://alonsomarcosm.github.io/DAMN-TEAMSSN/' },
-      { type: 'github', url: 'https://github.com/AlonsoMarcosM/DAMN-TEAMSSN' },
+      { type: 'technical_docs', url: 'https://alonsomarcosm99.github.io/DAMN-TEAMSSN/' },
+      { type: 'github', url: 'https://github.com/alonsomarcosm99/DAMN-TEAMSSN' },
     ],
     context: {
       es: 'Proyecto cloud en equipo para desplegar Cowrie, centralizar logs y activar análisis y alertas serverless.',
@@ -363,8 +363,8 @@ export const projects: Project[] = [
     tags: ['Angular', 'R / Plumber', 'Docker', 'OpenAPI'],
     stack: ['Angular', 'TypeScript', 'RxJS', 'R', 'Plumber', 'Docker Compose', 'OpenAPI'],
     links: [
-      { type: 'technical_docs', url: 'https://alonsomarcosm.github.io/TFG_AlonsoMarcosMu-oz/' },
-      { type: 'github', url: 'https://github.com/AlonsoMarcosM/TFG_AlonsoMarcosMu-oz' },
+      { type: 'technical_docs', url: 'https://alonsomarcosm99.github.io/TFG_AlonsoMarcosMu-oz/' },
+      { type: 'github', url: 'https://github.com/alonsomarcosm99/TFG_AlonsoMarcosMu-oz' },
     ],
     context: {
       es: 'Trabajo Fin de Grado que separa frontend y backend y expone ejecución remota mediante APIs documentadas.',

@@ -93,7 +93,7 @@ for (const card of cards) {
       <text x="72" y="190" class="eyebrow">${escapeXml(copy.eyebrow)}</text>
       ${lineMarkup}
       <text x="74" y="505" class="subtitle">${escapeXml(copy.subtitle)}</text>
-      <text x="74" y="565" class="owner">Alonso Marcos Muñoz · alonsomarcosm.github.io</text>
+      <text x="74" y="565" class="owner">Alonso Marcos Muñoz · alonsomarcosm99.github.io</text>
       ${image}
     </svg>`;
 

@@ -5,7 +5,7 @@ import { profile } from '../data/site';
 import { skillGroups } from '../data/skills';
 import { pick, type Lang } from '../i18n/utils';
 
-const site = 'https://alonsomarcosm.github.io';
+const site = 'https://alonsomarcosm99.github.io';
 
 function clean(value: string): string {
   return value.replace(/\s+/g, ' ').trim();
@@ -243,7 +243,7 @@ export function renderLlmsTxt(): string {
     '',
     `- [CV en español](${site}${profile.cv.es}): PDF público sin teléfono.`,
     `- [CV in English](${site}${profile.cv.en}): Public PDF without phone number.`,
-    `- [GitHub](https://github.com/AlonsoMarcosM): Repositorios públicos y documentación técnica.`,
+    `- [GitHub](https://github.com/alonsomarcosm99): Repositorios públicos y documentación técnica.`,
     `- [LinkedIn](https://www.linkedin.com/in/alonsomarcosm99/): Perfil profesional en LinkedIn.`,
     `- [Manfred](https://www.getmanfred.com/perfil/735337eb-0689-4fa6-8776-0dc0784bfb27): Timeline profesional estructurado.`,
     `- [Tecnoempleo](https://www.tecnoempleo.com/alonso-marcos-munoz.mpt): Perfil público en portal de empleo.`,
