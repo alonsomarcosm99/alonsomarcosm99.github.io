@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "repository": "AlonsoMarcosM/databricks-telco-churn-lakehouse",
-  "repository_url": "https://github.com/AlonsoMarcosM/databricks-telco-churn-lakehouse",
+  "repository": "alonsomarcosm99/databricks-telco-churn-lakehouse",
+  "repository_url": "https://github.com/alonsomarcosm99/databricks-telco-churn-lakehouse",
   "slug": "telco-churn-mlops-databricks",
   "title": {
     "es": "Lakehouse y MLOps de churn telco",
@@ -134,15 +134,15 @@
   "links": [
     {
       "type": "technical_docs",
-      "url": "https://alonsomarcosm.github.io/databricks-telco-churn-lakehouse/"
+      "url": "https://alonsomarcosm99.github.io/databricks-telco-churn-lakehouse/"
     },
     {
       "type": "case_study",
-      "url": "https://alonsomarcosm.github.io/es/projects/telco-churn-mlops-databricks/"
+      "url": "https://alonsomarcosm99.github.io/es/projects/telco-churn-mlops-databricks/"
     },
     {
       "type": "github",
-      "url": "https://github.com/AlonsoMarcosM/databricks-telco-churn-lakehouse"
+      "url": "https://github.com/alonsomarcosm99/databricks-telco-churn-lakehouse"
     }
   ]
 }

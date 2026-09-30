@@ -1,8 +1,8 @@
 # Portfolio — Alonso Marcos Muñoz
 
-> **Despliegue público:** [Abrir portfolio](https://alonsomarcosm.github.io)
+> **Despliegue público:** [Abrir portfolio](https://alonsomarcosm99.github.io)
 
-[![Quality and deploy](https://github.com/AlonsoMarcosM/AlonsoMarcosM.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/AlonsoMarcosM/AlonsoMarcosM.github.io/actions/workflows/deploy.yml)
+[![Quality and deploy](https://github.com/alonsomarcosm99/alonsomarcosm99.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/alonsomarcosm99/alonsomarcosm99.github.io/actions/workflows/deploy.yml)
 ![Astro](https://img.shields.io/badge/Astro-7-BC52EE?logo=astro&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)
@@ -19,7 +19,7 @@
 Personal portfolio of Alonso Marcos Muñoz, Data Engineer focused on reliable
 pipelines, data modelling, data quality and operable data platforms.
 
-🌐 **https://alonsomarcosm.github.io**
+🌐 **https://alonsomarcosm99.github.io**
 
 Bilingual (ES/EN with browser-language auto-detection), built with
 [Astro](https://astro.build) + [Tailwind CSS](https://tailwindcss.com),

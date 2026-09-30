@@ -4,6 +4,8 @@ import { Icon as Iconify } from 'astro-icon/components';
 
 interface Props {
   username: string;
+  /** Previous accounts of the same person whose public PRs, issues and contributions are added to the totals. */
+  legacyUsernames?: string[];
   lang: 'es' | 'en';
 }
 
@@ -39,7 +41,8 @@ interface LanguageStat {
   color: string;
 }
 
-const { username, lang } = Astro.props;
+const { username, legacyUsernames = [], lang } = Astro.props;
+const accounts = [username, ...legacyUsernames];
 const tt = (es: string, en: string) => (lang === 'es' ? es : en);
 const token = process.env.GITHUB_TOKEN;
 const currentDate = new Date();
@@ -51,7 +54,7 @@ const currentDateIso = currentDate.toISOString();
 const githubHeaders: Record<string, string> = {
   Accept: 'application/vnd.github+json',
   'X-GitHub-Api-Version': '2022-11-28',
-  'User-Agent': 'AlonsoMarcosM-portfolio',
+  'User-Agent': 'alonsomarcosm99-portfolio',
 };
 
 if (token) githubHeaders.Authorization = `Bearer ${token}`;
@@ -66,6 +69,8 @@ async function searchCount(query: string): Promise<number> {
   const url = `https://api.github.com/search/issues?q=${encodeURIComponent(query)}&per_page=1`;
   return (await getJson<SearchResponse>(url)).total_count;
 }
+
+const sum = (values: number[]) => values.reduce((total, value) => total + value, 0);
 
 const contributionQuery = `
   query PortfolioStats($login: String!, $yearStart: DateTime!, $lastYearStart: DateTime!, $now: DateTime!) {
@@ -87,30 +92,38 @@ let mergedPullRequests: number | null = null;
 let issues: number | null = null;
 let contributionsLastYear: number | null = null;
 
+const contributionsFor = (login: string) =>
+  getJson<ContributionsResponse>('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { ...githubHeaders, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: contributionQuery,
+      variables: {
+        login,
+        yearStart: currentYearStart,
+        lastYearStart,
+        now: currentDateIso,
+      },
+    }),
+  });
+
+// Repositories and languages come from the current account only: it owns every
+// project. Pull requests, issues and contributions are attributed to the account
+// that authored them, so the totals add up every account listed in `accounts`.
 const [repositoriesResult, searchesResult, contributionsResult] = await Promise.allSettled([
   getJson<GitHubRepository[]>(
     `https://api.github.com/users/${encodeURIComponent(username)}/repos?per_page=100&type=owner&sort=updated`,
   ),
-  Promise.all([
-    searchCount(`author:${username} type:pr is:public`),
-    searchCount(`author:${username} type:pr is:merged is:public`),
-    searchCount(`author:${username} type:issue is:public`),
-  ]),
-  token
-    ? getJson<ContributionsResponse>('https://api.github.com/graphql', {
-        method: 'POST',
-        headers: { ...githubHeaders, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          query: contributionQuery,
-          variables: {
-            login: username,
-            yearStart: currentYearStart,
-            lastYearStart,
-            now: currentDateIso,
-          },
-        }),
-      })
-    : Promise.resolve(null),
+  Promise.all(
+    accounts.map((login) =>
+      Promise.all([
+        searchCount(`author:${login} type:pr is:public`),
+        searchCount(`author:${login} type:pr is:merged is:public`),
+        searchCount(`author:${login} type:issue is:public`),
+      ]),
+    ),
+  ),
+  token ? Promise.all(accounts.map(contributionsFor)) : Promise.resolve(null),
 ]);
 
 if (repositoriesResult.status === 'fulfilled') {
@@ -120,14 +133,20 @@ if (repositoriesResult.status === 'fulfilled') {
 }
 
 if (searchesResult.status === 'fulfilled') {
-  [pullRequests, mergedPullRequests, issues] = searchesResult.value;
+  const perAccount = searchesResult.value;
+  pullRequests = sum(perAccount.map(([opened]) => opened));
+  mergedPullRequests = sum(perAccount.map(([, merged]) => merged));
+  issues = sum(perAccount.map(([, , opened]) => opened));
 } else {
   console.warn('GitHub issue and pull request totals could not be loaded:', searchesResult.reason);
 }
 
-if (contributionsResult.status === 'fulfilled' && contributionsResult.value?.data?.user) {
-  commitsThisYear = contributionsResult.value.data.user.currentYear?.totalCommitContributions ?? null;
-  contributionsLastYear = contributionsResult.value.data.user.lastYear?.contributionCalendar.totalContributions ?? null;
+if (contributionsResult.status === 'fulfilled' && contributionsResult.value) {
+  const users = contributionsResult.value.map((response) => response?.data?.user);
+  if (users.every((user) => user)) {
+    commitsThisYear = sum(users.map((user) => user?.currentYear?.totalCommitContributions ?? 0));
+    contributionsLastYear = sum(users.map((user) => user?.lastYear?.contributionCalendar.totalContributions ?? 0));
+  }
 } else if (contributionsResult.status === 'rejected') {
   console.warn('GitHub contribution totals could not be loaded:', contributionsResult.reason);
 }
@@ -138,10 +157,14 @@ if (commitsThisYear === null) {
   try {
     const from = `${currentYear}-01-01`;
     const to = `${currentYear}-12-31`;
-    const url = `https://api.github.com/search/commits?q=${encodeURIComponent(
-      `author:${username} committer-date:${from}..${to} is:public`,
-    )}&per_page=1`;
-    commitsThisYear = (await getJson<SearchResponse>(url)).total_count;
+    const totals = await Promise.all(
+      accounts.map(async (login) => {
+        const query = 'author:' + login + ' committer-date:' + from + '..' + to + ' is:public';
+        const url = 'https://api.github.com/search/commits?q=' + encodeURIComponent(query) + '&per_page=1';
+        return (await getJson<SearchResponse>(url)).total_count;
+      }),
+    );
+    commitsThisYear = sum(totals);
   } catch (error) {
     console.warn('GitHub commit total could not be loaded:', error);
   }
@@ -388,6 +411,25 @@ const overviewStats = [
   <p class="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-[11px] text-slate-500">
     <span>{tt('Solo actividad pública', 'Public activity only')}</span>
     <span aria-hidden="true">·</span>
+    {legacyUsernames.length > 0 && (
+      <>
+        <span>
+          {tt('Incluye la actividad de mi cuenta anterior', 'Includes activity from my previous account')}{' '}
+          {legacyUsernames.map((login, index) => (
+            <>
+              {index > 0 && ', '}
+              <a
+                class="underline decoration-slate-300 underline-offset-2 hover:text-brand-500 dark:decoration-slate-700"
+                href={`https://github.com/${login}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >@{login}</a>
+            </>
+          ))}
+        </span>
+        <span aria-hidden="true">·</span>
+      </>
+    )}
     <span>{tt('Actualizado', 'Updated')} {buildDate}</span>
     <span aria-hidden="true">·</span>
     <a class="underline decoration-slate-300 underline-offset-2 hover:text-brand-500 dark:decoration-slate-700" href="https://docs.github.com/en/rest" target="_blank" rel="noopener noreferrer">GitHub API</a>

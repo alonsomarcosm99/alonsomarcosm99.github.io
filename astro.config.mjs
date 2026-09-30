@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // Sitio servido en la raíz de GitHub Pages (repo de tipo user-page).
 export default defineConfig({
-  site: 'https://alonsomarcosm.github.io',
+  site: 'https://alonsomarcosm99.github.io',
   i18n: {
     locales: ['es', 'en'],
     defaultLocale: 'es',

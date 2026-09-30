@@ -8,9 +8,9 @@ const check = process.argv.includes('--check');
 await mkdir(destination, { recursive: true });
 
 const sources = [
-  { slug: 'telco-churn-mlops-databricks', url: 'https://api.github.com/repos/AlonsoMarcosM/databricks-telco-churn-lakehouse/contents/portfolio.json?ref=main' },
-  { slug: 'smart-parking-albacete', url: 'https://api.github.com/repos/AlonsoMarcosM/smart-parking-albacete/contents/portfolio.json?ref=main' },
-  { slug: 'big-data-catalog-batch-streaming', url: 'https://api.github.com/repos/AlonsoMarcosM/spark-kafka-airflow-data-platform/contents/portfolio.json?ref=main' },
+  { slug: 'telco-churn-mlops-databricks', url: 'https://api.github.com/repos/alonsomarcosm99/databricks-telco-churn-lakehouse/contents/portfolio.json?ref=main' },
+  { slug: 'smart-parking-albacete', url: 'https://api.github.com/repos/alonsomarcosm99/smart-parking-albacete/contents/portfolio.json?ref=main' },
+  { slug: 'big-data-catalog-batch-streaming', url: 'https://api.github.com/repos/alonsomarcosm99/spark-kafka-airflow-data-platform/contents/portfolio.json?ref=main' },
 ];
 
 let stale = false;

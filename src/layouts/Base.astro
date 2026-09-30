@@ -29,7 +29,7 @@ const {
 } = Astro.props;
 const t = useTranslations(lang);
 
-const site = (Astro.site ? Astro.site.toString() : 'https://alonsomarcosm.github.io').replace(/\/$/, '');
+const site = (Astro.site ? Astro.site.toString() : 'https://alonsomarcosm99.github.io').replace(/\/$/, '');
 const norm = path.replace(/^\/|\/$/g, '');
 // Sin literales de plantilla anidados: rompen el scanner de @astrojs/compiler.
 const buildUrl = (l: Lang) => site + '/' + l + (norm ? '/' + norm : '') + '/';
