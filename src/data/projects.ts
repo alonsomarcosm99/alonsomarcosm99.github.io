@@ -310,8 +310,8 @@ export const projects: Project[] = [
     slug: 'honeypot-aws-terraform',
     title: { es: 'Honeypot en AWS con Terraform', en: 'AWS Honeypot with Terraform' },
     tagline: {
-      es: 'Honeypot SSH con análisis serverless de logs e infraestructura como código.',
-      en: 'SSH honeypot with serverless log analysis and infrastructure as code.',
+      es: 'Desarrollé el código de una plataforma que recoge logs de un honeypot en EC2, los almacena en S3 y los analiza con Lambda para generar alertas SNS, con Terraform y CloudWatch.',
+      en: 'Developed the code for a platform that collects EC2 honeypot logs, stores them in S3 and analyses them with Lambda to generate SNS alerts, using Terraform and CloudWatch.',
     },
     category: { es: 'Cloud · Seguridad', en: 'Cloud · Security' },
     icon: { icon: 'simple-icons:terraform', color: '#844FBA' },
@@ -325,8 +325,8 @@ export const projects: Project[] = [
       { type: 'github', url: 'https://github.com/alonsomarcosm99/DAMN-TEAMSSN' },
     ],
     context: {
-      es: 'Proyecto cloud en equipo para desplegar Cowrie, centralizar logs y activar análisis y alertas serverless.',
-      en: 'Team cloud project deploying Cowrie, centralising logs and enabling serverless analysis and alerts.',
+      es: 'Desarrollé el código de esta plataforma académica AWS para desplegar Cowrie, centralizar logs y activar análisis y alertas serverless.',
+      en: 'I developed the code for this academic AWS platform to deploy Cowrie, centralise logs and enable serverless analysis and alerts.',
     },
     highlights: {
       es: ['Terraform modular', 'Despliegue y destrucción automatizados', 'IAM mínimo, cifrado y acceso mediante SSM'],

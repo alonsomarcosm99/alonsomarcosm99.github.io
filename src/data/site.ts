@@ -44,6 +44,10 @@ export const profile: SiteProfile = {
       es: 'El Máster en Big Data y Computación en la Nube me ha dado práctica con Databricks, Spark, Kafka, Airflow y AWS, y la certificación CAPM, método para planificar alcance, riesgos y entregas. En el día a día uso flujos de trabajo agénticos con IA para acelerar el desarrollo, las pruebas y la revisión de código sin perder trazabilidad.',
       en: 'My MSc in Big Data and Cloud Computing gave me hands-on practice with Databricks, Spark, Kafka, Airflow and AWS, and the CAPM certification a structured method to plan scope, risks and deliveries. Day to day I use agentic AI workflows to speed up development, testing and code review while keeping the work traceable.',
     },
+    {
+      es: 'En Sistemas y servicios en la nube implementé prácticas de EC2, VPC, balanceo ALB y Auto Scaling con Terraform. Desarrollé el código de DAMN-TEAMSSN para recoger logs en S3, analizarlos con Lambda y activar alertas SNS y observabilidad CloudWatch. Proyecto: https://github.com/alonsomarcosm99/DAMN-TEAMSSN',
+      en: 'In Cloud Systems and Services I implemented EC2, VPC, ALB load balancing and Auto Scaling labs with Terraform. I developed the DAMN-TEAMSSN code to collect logs in S3, analyse them with Lambda and enable SNS alerts and CloudWatch observability. Project: https://github.com/alonsomarcosm99/DAMN-TEAMSSN',
+    },
   ],
   location: { es: 'Albacete, España', en: 'Albacete, Spain' },
   email: 'alonsomarcosm99@gmail.com',
