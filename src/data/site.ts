@@ -48,6 +48,10 @@ export const profile: SiteProfile = {
       es: 'En Sistemas y servicios en la nube implementé prácticas de EC2, VPC, balanceo ALB y Auto Scaling con Terraform. Desarrollé el código de DAMN-TEAMSSN para recoger logs en S3, analizarlos con Lambda y activar alertas SNS y observabilidad CloudWatch. Proyecto: https://github.com/alonsomarcosm99/DAMN-TEAMSSN',
       en: 'In Cloud Systems and Services I implemented EC2, VPC, ALB load balancing and Auto Scaling labs with Terraform. I developed the DAMN-TEAMSSN code to collect logs in S3, analyse them with Lambda and enable SNS alerts and CloudWatch observability. Project: https://github.com/alonsomarcosm99/DAMN-TEAMSSN',
     },
+    {
+      es: 'En Arquitectura de Sistemas Big Data configuré tres máquinas Ubuntu con Vagrant y Ansible, automatizando la instalación y configuración de Mosquitto y verificando la comunicación MQTT. Es una práctica propia del máster que complementa mi experiencia profesional en operación y despliegues.',
+      en: 'In Big Data Systems Architecture I configured three Ubuntu machines with Vagrant and Ansible, automating Mosquitto installation and configuration and verifying MQTT communication. This hands-on MSc lab complements my professional experience in operations and deployments.',
+    },
   ],
   location: { es: 'Albacete, España', en: 'Albacete, Spain' },
   email: 'alonsomarcosm99@gmail.com',
