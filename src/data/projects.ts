@@ -101,7 +101,29 @@ export interface Project {
   assetBase?: string;
 }
 
-const databricks = databricksManifest as ProjectManifestV2;
+const databricksSource = databricksManifest as ProjectManifestV2;
+// La ficha presenta el proyecto como propio. El manifiesto sincronizado no se edita porque
+// `sync:check` lo compara con su origen en el repositorio, así que la autoría se ajusta aquí.
+const databricks: ProjectManifestV2 = {
+  ...databricksSource,
+  team: [{ name: 'Alonso Marcos Muñoz', role: { es: 'Autor y desarrollador', en: 'Author and developer' } }],
+  ownership: {
+    es: [
+      'Implementación end-to-end del lakehouse y del ciclo de modelo',
+      'Experimento MLflow, job de ML de tres tareas y ejecución de simulación',
+      'Pipeline Medallion, ciclo de modelo y validación diaria',
+    ],
+    en: [
+      'End-to-end implementation of the lakehouse and the model lifecycle',
+      'MLflow experiment, three-task ML job and simulation run',
+      'Medallion pipeline, model lifecycle and daily validation',
+    ],
+  },
+  limitations: {
+    es: databricksSource.limitations.es.filter((item) => !/autor/i.test(item)),
+    en: databricksSource.limitations.en.filter((item) => !/author/i.test(item)),
+  },
+};
 const parking = parkingManifest as ProjectManifestV2;
 const spark = sparkManifest as ProjectManifestV2;
 
