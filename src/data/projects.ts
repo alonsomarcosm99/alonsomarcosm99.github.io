@@ -131,8 +131,8 @@ function fromManifest(
 export const projects: Project[] = [
   fromManifest(databricks, {
     tagline: {
-      es: 'Plataforma de datos de principio a fin, desarrollada en coautoría, que predice la baja de clientes de una operadora con datos sintéticos usando PySpark, Delta Lake, Unity Catalog y MLflow.',
-      en: 'Co-developed end-to-end data platform that predicts customer churn for a telecom operator on synthetic data using PySpark, Delta Lake, Unity Catalog and MLflow.',
+      es: 'Plataforma de datos de principio a fin que predice la baja de clientes de una operadora con datos sintéticos usando PySpark, Delta Lake, Unity Catalog y MLflow.',
+      en: 'End-to-end data platform that predicts customer churn for a telecom operator on synthetic data using PySpark, Delta Lake, Unity Catalog and MLflow.',
     },
     category: { es: 'Big Data · MLOps', en: 'Big Data · MLOps' },
     badge: { es: 'Proyecto académico aplicado', en: 'Applied academic project' },
