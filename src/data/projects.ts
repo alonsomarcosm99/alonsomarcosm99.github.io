@@ -216,7 +216,7 @@ export const projects: Project[] = [
   fromManifest(spark, {
     tagline: {
       es: 'Procesa datos por lotes y en tiempo real con Spark, Kafka y Airflow y los organiza en capas de calidad creciente (arquitectura Medallion) sobre Delta Lake.',
-      en: 'Processes batch and real-time data with Spark, Kafka and Airflow and organises it into layers of increasing quality (Medallion architecture) on Delta Lake.',
+      en: 'Processes batch and real-time data with Spark, Kafka and Airflow and organizes it into layers of increasing quality (Medallion architecture) on Delta Lake.',
     },
     category: { es: 'Data Engineering', en: 'Data Engineering' },
     badge: { es: 'Proyecto académico aplicado', en: 'Applied academic project' },
@@ -251,7 +251,7 @@ export const projects: Project[] = [
     title: { es: 'OpenMetadata + DCAT-AP-ES', en: 'OpenMetadata + DCAT-AP-ES' },
     tagline: {
       es: 'Catálogo de metadatos en OpenMetadata sobre Kubernetes que descubre datos de PostgreSQL, los sincroniza y los exporta validados al estándar DCAT-AP-ES.',
-      en: 'OpenMetadata metadata catalogue on Kubernetes that discovers PostgreSQL data, keeps it in sync and exports it validated against the DCAT-AP-ES standard.',
+      en: 'OpenMetadata metadata catalog on Kubernetes that discovers PostgreSQL data, keeps it in sync and exports it validated against the DCAT-AP-ES standard.',
     },
     category: { es: 'Gobierno del dato', en: 'Data governance' },
     icon: { img: '/img/tech/openmetadata.png' },
@@ -293,7 +293,7 @@ export const projects: Project[] = [
     title: { es: 'Gobierno y Calidad del Dato · UNE', en: 'Data Governance & Quality · UNE' },
     tagline: {
       es: 'Caso práctico de gobierno del dato con OpenMetadata y Python que aplica las normas UNE 0077-0081 a la catalogación, la calidad y la trazabilidad.',
-      en: 'Data governance case study with OpenMetadata and Python that applies the UNE 0077-0081 standards to cataloguing, quality and traceability.',
+      en: 'Data governance case study with OpenMetadata and Python that applies the UNE 0077-0081 standards to cataloging, quality and traceability.',
     },
     category: { es: 'Gobierno del dato', en: 'Data governance' },
     icon: { icon: 'lucide:scale', color: '#16A34A' },
@@ -333,7 +333,7 @@ export const projects: Project[] = [
     title: { es: 'Honeypot en AWS con Terraform', en: 'AWS Honeypot with Terraform' },
     tagline: {
       es: 'Desarrollé el código de una plataforma que recoge logs de un honeypot en EC2, los almacena en S3 y los analiza con Lambda para generar alertas SNS, con Terraform y CloudWatch.',
-      en: 'Developed the code for a platform that collects EC2 honeypot logs, stores them in S3 and analyses them with Lambda to generate SNS alerts, using Terraform and CloudWatch.',
+      en: 'Developed the code for a platform that collects EC2 honeypot logs, stores them in S3 and analyzes them with Lambda to generate SNS alerts, using Terraform and CloudWatch.',
     },
     category: { es: 'Cloud · Seguridad', en: 'Cloud · Security' },
     icon: { icon: 'simple-icons:terraform', color: '#844FBA' },
