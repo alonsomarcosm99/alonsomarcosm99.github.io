@@ -35,28 +35,21 @@
     {
       "name": "Alonso Marcos Muñoz",
       "role": {
-        "es": "Coautor end-to-end",
-        "en": "End-to-end co-author"
-      }
-    },
-    {
-      "name": "Jose Barros",
-      "role": {
-        "es": "Coautor",
-        "en": "Co-author"
+        "es": "Autor y desarrollador",
+        "en": "Author and developer"
       }
     }
   ],
   "ownership": {
     "es": [
-      "Coimplementación end-to-end confirmada por Alonso el 2026-09-14",
-      "Experimento MLflow, job de ML de tres tareas y ejecución de simulación asociados a Alonso",
-      "Trabajo compartido en pipeline Medallion, ciclo de modelo y validación diaria"
+      "Implementación end-to-end del lakehouse y del ciclo de modelo",
+      "Experimento MLflow, job de ML de tres tareas y ejecución de simulación",
+      "Pipeline Medallion, ciclo de modelo y validación diaria"
     ],
     "en": [
-      "End-to-end co-implementation confirmed by Alonso on 2026-09-14",
-      "MLflow experiment, three-task ML job and simulation run associated with Alonso",
-      "Shared work across the Medallion pipeline, model lifecycle and daily validation"
+      "End-to-end implementation of the lakehouse and the model lifecycle",
+      "MLflow experiment, three-task ML job and simulation run",
+      "Medallion pipeline, model lifecycle and daily validation"
     ]
   },
   "verifiedMetrics": [
@@ -122,13 +115,11 @@
   "limitations": {
     "es": [
       "Los datos son sintéticos y el escenario denominado producción es una simulación académica",
-      "La validación y el despliegue autenticados requieren un workspace Databricks activo",
-      "La autoría es compartida y se mantiene la atribución de ambos coautores"
+      "La validación y el despliegue autenticados requieren un workspace Databricks activo"
     ],
     "en": [
       "The data is synthetic and the production-labelled scenario is an academic simulation",
-      "Authenticated validation and deployment require an active Databricks workspace",
-      "Authorship is shared and both co-authors remain credited"
+      "Authenticated validation and deployment require an active Databricks workspace"
     ]
   },
   "links": [
