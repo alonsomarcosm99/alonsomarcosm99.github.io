@@ -34,11 +34,11 @@ export const profile: SiteProfile = {
   about: [
     {
       es: 'Soy Ingeniero de Datos en Tragsatec, dentro del proyecto ImpulsaDATA para la Dirección General del Dato. Construyo y opero pipelines ETL con Python y SQL que integran, validan y publican la información de los catálogos de datos de 22 ministerios y organismos públicos.',
-      en: 'I am a Data Engineer at Tragsatec, working on the ImpulsaDATA project for the Spanish Data Directorate. I build and run Python and SQL ETL pipelines that integrate, validate and publish the data catalogue information of 22 Spanish ministries and public bodies.',
+      en: 'I am a Data Engineer at Tragsatec, working on the ImpulsaDATA project for the Spanish Data Directorate. I build and run Python and SQL ETL pipelines that integrate, validate and publish the data catalog information of 22 Spanish ministries and public bodies.',
     },
     {
       es: 'Cubro el ciclo completo: modelar y transformar datos en PostgreSQL y Oracle, automatizar controles de calidad y desplegar en desarrollo, pruebas y producción. Dentro del proyecto AgoraData lidero el desarrollo de la interfaz web que sirve de front-end a todo el backend y a los procesos Python de ImpulsaDATA, con Java, Spring Boot, Vaadin y PostgreSQL.',
-      en: 'I cover the full cycle: modelling and transforming data in PostgreSQL and Oracle, automating quality checks and deploying to development, test and production. Within the AgoraData project, I lead the development of the web interface that serves as the front end for all of ImpulsaDATA\'s backend and Python processes, using Java, Spring Boot, Vaadin and PostgreSQL.',
+      en: 'I cover the full cycle: modeling and transforming data in PostgreSQL and Oracle, automating quality checks and deploying to development, test and production. Within the AgoraData project, I lead the development of the web interface that serves as the front end for all of ImpulsaDATA\'s backend and Python processes, using Java, Spring Boot, Vaadin and PostgreSQL.',
     },
     {
       es: 'El Máster en Big Data y Computación en la Nube me ha dado práctica con Databricks, Spark, Kafka, Airflow y AWS, y la certificación CAPM, método para planificar alcance, riesgos y entregas. En el día a día uso flujos de trabajo agénticos con IA para acelerar el desarrollo, las pruebas y la revisión de código sin perder trazabilidad.',
@@ -46,7 +46,7 @@ export const profile: SiteProfile = {
     },
     {
       es: 'En Sistemas y servicios en la nube implementé prácticas de EC2, VPC, balanceo ALB y Auto Scaling con Terraform. Desarrollé el código de DAMN-TEAMSSN para recoger logs en S3, analizarlos con Lambda y activar alertas SNS y observabilidad CloudWatch. Proyecto: https://github.com/alonsomarcosm99/DAMN-TEAMSSN',
-      en: 'In Cloud Systems and Services I implemented EC2, VPC, ALB load balancing and Auto Scaling labs with Terraform. I developed the DAMN-TEAMSSN code to collect logs in S3, analyse them with Lambda and enable SNS alerts and CloudWatch observability. Project: https://github.com/alonsomarcosm99/DAMN-TEAMSSN',
+      en: 'In Cloud Systems and Services I implemented EC2, VPC, ALB load balancing and Auto Scaling labs with Terraform. I developed the DAMN-TEAMSSN code to collect logs in S3, analyze them with Lambda and enable SNS alerts and CloudWatch observability. Project: https://github.com/alonsomarcosm99/DAMN-TEAMSSN',
     },
     {
       es: 'En Arquitectura de Sistemas Big Data configuré tres máquinas Ubuntu con Vagrant y Ansible, automatizando la instalación y configuración de Mosquitto y verificando la comunicación MQTT. Es una práctica propia del máster que complementa mi experiencia profesional en operación y despliegues.',
