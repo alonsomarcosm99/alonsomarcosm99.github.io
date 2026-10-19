@@ -36,7 +36,7 @@ export const education: EducationItem[] = [
     href: 'https://esi.uclm.es/index.php/grado-en-ingenieria-informatica/',
     title: {
       es: 'Grado en Ingeniería Informática · Especialización en Tecnologías de la Información',
-      en: 'BSc in Computer Engineering · Information Technologies specialisation',
+      en: 'BSc in Computer Engineering · Information Technologies specialization',
     },
     period: { es: 'Sept. 2019 – Jun. 2025', en: 'Sep 2019 – Jun 2025' },
   },

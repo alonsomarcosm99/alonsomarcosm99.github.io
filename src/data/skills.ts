@@ -11,7 +11,7 @@ export const skillGroups: SkillGroup[] = [
     items: [
       'Python',
       'ETL / ELT',
-      { es: 'Modelado de datos', en: 'Data modelling' },
+      { es: 'Modelado de datos', en: 'Data modeling' },
       'CKAN + extensiones',
       'PostgreSQL',
       'Oracle',

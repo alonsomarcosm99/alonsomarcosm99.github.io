@@ -25,7 +25,7 @@ export const profile: SiteProfile = {
   name: 'Alonso Marcos Muñoz',
   role: {
     es: 'Data Engineer · Pipelines, modelado y plataformas',
-    en: 'Data Engineer · Pipelines, data modelling & platforms',
+    en: 'Data Engineer · Pipelines, data modeling & platforms',
   },
   tagline: {
     es: 'Construyo pipelines, modelos y plataformas de datos con Python y SQL. Aporto experiencia profesional en metadatos públicos y proyectos aplicados con Databricks, Spark, Airflow, Kafka y AWS.',
